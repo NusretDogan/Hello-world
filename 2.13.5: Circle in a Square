@@ -1,0 +1,26 @@
+speed(0)
+radius = int(input("radius: "))
+
+def draw_square(a):
+    penup()
+    setposition(-a/2,-a/2)
+    pendown()
+    color("red")
+    begin_fill()
+    for i in range(4):
+      forward(radius*2)
+      left(90)
+    end_fill()
+def draw_circle(r):
+    penup()
+    setposition(0,-r)
+    pendown()
+    color("blue")
+    begin_fill()
+    circle(r)
+    end_fill()
+
+draw_square(radius*2)
+draw_circle(radius)
+
+

@@ -1,0 +1,15 @@
+speed(10)
+
+length = 10
+def block():
+	pendown()
+	for i in range(4):
+		forward(length)
+		left(90)
+	penup()
+	forward(length*2)
+penup()
+setposition(-150,0)
+for i in range(5):
+	block()
+	length = length +10

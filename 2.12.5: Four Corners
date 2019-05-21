@@ -1,0 +1,18 @@
+speed(10)
+penup()
+setposition(-200,-200)
+pendown()
+square_length = int(input("length: "))
+
+def draw_square():
+    for i in range(4):
+        forward(square_length)
+        left(90)
+
+def move():
+    forward(400)
+    left(90)
+
+for i in range(4):
+    draw_square()
+    move()

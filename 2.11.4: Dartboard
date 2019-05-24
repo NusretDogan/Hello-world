@@ -1,0 +1,19 @@
+"""
+Burada radius degiskenini 25 olarak belirleyip bunu 
+dairenin yaricapi olarak kullaniyoruz.
+Yaricapi 25'ten baslayarak 25'er artan ic ice 4 daire ciziyoruz
+"""
+
+speed(10)
+
+def daire_ciz():
+    radius = 25
+    for i in range(4):
+        circle(radius)
+        penup()
+        right(90)
+        forward(25)
+        left(90)
+        radius = radius + 25
+        pendown()
+daire_ciz()

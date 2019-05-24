@@ -1,0 +1,64 @@
+#Aklımizdan bir sayı tutalim
+aklimdaki_sayi = 2
+
+#Kullanicidan bir sayi tahmin etmesini soyleyen bir girdi(input) olusturalim
+tahmin_edilen_sayi = [1-10]
+
+#Yesil tik cizen bir fonksiyon tanimlayalim
+def yesil_tik():
+    pensize(10)
+    color("green")
+    left(135)
+    forward(50)
+    backward(50)
+    right(90)
+    forward(100)
+
+#Yukari ok cizen bir fonksiyon tanimlayalim
+def yukari_ok():
+    pensize(10)
+    color("red")
+    left(90)
+    forward(100)
+    left(135)
+    forward(25)
+    backward(25)
+    left(90)
+    forward(25)
+    left(45)
+    penup()
+    setposition(0,0)
+    pendown()
+    clear()
+
+#Asagi ok cizen bir fonksiyon tanimlayalim
+def asagi_ok():
+    pensize(10)
+    color("red")
+    right(90)
+    forward(100)
+    left(135)
+    forward(25)
+    backward(25)
+    left(90)
+    forward(25)
+    right(135)
+    penup()
+    setposition(0,0)
+    pendown()
+    clear()
+
+#while dongusu kullanarak tahmin edilen sayi, aklimizdaki sayidan büyükse asagi,
+#kücükse yukari ok cizen 
+#aklimizdaki sayiya esitse yesil tik cizen bir program yaziyoruz.
+
+while tahmin_edilen_sayi != aklimdaki_sayi:
+    tahmin_edilen_sayi = int(input("Bir sayi sec (1-10): "))
+    if tahmin_edilen_sayi > aklimdaki_sayi:
+        asagi_ok()
+    elif tahmin_edilen_sayi < aklimdaki_sayi:
+        yukari_ok()
+    else:
+        yesil_tik()
+
+

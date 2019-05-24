@@ -1,0 +1,32 @@
+"""
+Bu program ekrani mavi dairelerle doldurur.
+"""
+speed(0)
+
+# Bu fonksiyon yan yana yaricapi 20 olan 10 mavi daire cizer
+def on_daire_ciz():
+    for i in range(10):
+        pendown()
+        begin_fill()
+        color("light blue")
+        circle(20)
+        end_fill()
+        penup()
+        forward(40)
+
+# Bu fonksiyon tosbagayi üst satirdaki baslangic pozisyonuna tasir        
+def ust_satira_git():
+    left(90)
+    forward(40)
+    right(90)
+    backward(400)
+
+    
+# Tosbagayi sol alt koseye tasiyoruz
+penup()
+setposition(-180,-200)
+
+# 10 daire cizen ve üst satira tasiyan fonksiyonlari 10 defa tekrar ediyoruz.
+for i in range(10):
+    on_daire_ciz()
+    ust_satira_git()

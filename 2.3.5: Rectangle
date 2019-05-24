@@ -1,3 +1,7 @@
+"""
+Bu program kisa kosesi 50, uzun kosesi 100 birim olan bir dikdortgen cizer
+"""
+
 forward(50)
 left(90)
 forward(100)

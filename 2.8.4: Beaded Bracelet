@@ -1,0 +1,23 @@
+"""
+Bu program yaricapi 10 olan 36 zincirden olusan ve yaricapi olan
+200 bir bilezik cizer.
+"""
+
+speed(10)
+
+#burada, yaricapi 10 olan bir daire cizen ve
+# tosbagayi baslangic pozisyonuna geri getiren bir fonksiyon tanimliyoruz
+def bracelet():
+    penup()
+    forward(100)
+    pendown()
+    circle(10)
+    penup()
+    backward(100)
+    pendown()
+    left(10)
+
+#burada yukarida tanimladigimiz fonksiyonu 36 kez tekrar eden
+# bir for dongusu kullaniyoruz.
+for i in range(36):
+    bracelet()

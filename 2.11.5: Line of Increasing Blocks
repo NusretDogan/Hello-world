@@ -1,15 +1,18 @@
 speed(10)
 
-length = 10
-def block():
+uzunluk = 10
+
+def kare():
 	pendown()
 	for i in range(4):
-		forward(length)
+		forward(uzunluk)
 		left(90)
 	penup()
-	forward(length*2)
+	forward(uzunluk*2)
+	
 penup()
 setposition(-150,0)
+
 for i in range(5):
-	block()
-	length = length +10
+	kare()
+	uzunluk = uzunluk + 10

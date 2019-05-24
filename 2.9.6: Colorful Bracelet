@@ -1,0 +1,28 @@
+speed(0)
+
+#burada tanimladigimiz fonksiyonla merkezden 100 birim 
+# ötede 10 birim yaricapinda bir cember cizip
+# tosbaganin yonunu 10 derece ceviriyoruz 
+def bracelet():
+    penup()
+    forward(100)
+    pendown()
+    circle(10)
+    penup()
+    backward(100)
+    pendown()
+    left(10)
+
+for i in range(12):
+    color("blue")
+    begin_fill()
+    bracelet()
+    end_fill()
+    color("red")
+    begin_fill()
+    bracelet()
+    end_fill()
+    color("purple")
+    begin_fill()
+    bracelet()
+    end_fill()

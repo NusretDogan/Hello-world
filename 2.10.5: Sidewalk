@@ -1,0 +1,22 @@
+speed(0)
+penup()
+setposition(-200, -200)
+pendown()
+
+#burada kare cizen bir fonksiyon tanimliyoruz
+def kare_ciz():
+    for i in range(4):
+        forward(50)
+        left(90)
+
+#burada bir sira kare cizen bir fonksiyon tanimliyoruz
+def bir_sira_kare_ciz():
+    for i in range(8):
+        kare_ciz()
+        forward(50)
+        
+#burada bir sira kare cizen fonksiyonu ekranin koselerine uyguluyoruz
+for i in range(4):
+    bir_sira_kare_ciz()
+    left(90)
+    forward(50)

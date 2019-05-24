@@ -1,0 +1,41 @@
+"""
+Bu program bir kosesi 50 birim olan kare ile yaricapi 25 olan daireler cizer
+ve bunlari ust uste dizer
+"""
+#Programa tosbagayi baslangic noktasindan sayfanin altina tasiyarak basliyoruz.
+speed(10)
+penup()
+setposition(0, -200)
+pendown()
+
+#Burada yaricapi 25 olan bir daire cizen ve bir fonksiyon tanimliyoruz.
+def daire_ciz():
+    circle(25)
+
+#Burada daire cizdikten sonra kare cizmek icin baslangic pozisyonuna tasiyan
+# bir fonksiyon tanimliyoruz.
+def pozisyon_al():
+    penup()
+    left(90)
+    forward(50)
+    right(90)
+    forward(25)
+    pendown()
+
+#Burada bir kosesi 50 birim olan bir kare cizen bir fonksiyon tanimliyoruz.    
+def kare_ciz():
+    for i in range(4):
+        left(90)
+        forward(50)
+
+#Burada yukarida tanimladigimiz fonksiyonlari 4 defa tekrar eden
+# bir for dongusu kullaniyoruz
+for i in range(4):
+    daire_ciz()
+    pozisyon_al()
+    kare_ciz()
+    left(90)
+    forward(50)
+    left(90)
+    forward(25)
+    left(180)
